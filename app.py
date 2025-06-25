@@ -4,10 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# Allow Tilda frontend to make calls
+# Enable CORS for frontend access (e.g., Tilda)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For public access. Replace * with your Tilda domain for security.
+    allow_origins=["*"],  # Change to your domain for security
     allow_methods=["*"],
     allow_headers=["*"],
 )
